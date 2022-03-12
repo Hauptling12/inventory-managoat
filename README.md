@@ -1,7 +1,3 @@
-Support an Open Source Developer! :hearts:  
-
-[![Become a patron](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/jojolepro)
-
 # Inventory Managoat
 A Simple Command Line Inventory Manager.  
 Prevent food waste and never lose track of your items!
@@ -74,7 +70,7 @@ First, install Rust (using [rustup](https://rustup.rs/)).
 Then, run the following to build from source:
 ```sh
 # Create a local copy
-git clone https://github.com/jojolepro/inventory-managoat
+git clone https://github.com/Hauptling12/inventory-managoat
 cd inventory-managoat
 
 # Build from source files
@@ -83,6 +79,4 @@ cargo build --release
 # (Optional) Install for the current user
 mv target/release/inv ~/.local/bin/inv
 ```
-
-Note: On windows, you should run those commands inside of [git bash](https://gitforwindows.org/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 

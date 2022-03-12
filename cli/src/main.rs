@@ -7,9 +7,7 @@ use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
 #[structopt(
-    name = "Inventory Managoat",
-    author = "Joël Lupien <jojolepromain@gmail.com>",
-    about = "Command line utility to manage your personal inventory."
+    name = "asset-mr",
 )]
 pub struct Manager {
     /// Uses the inventory with this name. The files will be loaded and saved using this prefix. Defaults to "inventory".
@@ -33,8 +31,7 @@ impl Manager {
     pub fn fix_workdir(&mut self) {
         if self.workdir.is_none() {
             self.workdir = Some(default_workdir());
-        }
-    }
+        }}
 
     /// Executes the subcommand on the inventory instance.
     pub fn exec(&self, inventory: &mut Inventory) {
@@ -51,10 +48,7 @@ impl Manager {
             Command::ListMissing => print_missing(inventory, self.minimal),
             Command::Use { type_id, quantity } => inventory.use_instance(*type_id, *quantity),
             Command::Trash { instance_id } => inventory.trash(*instance_id),
-        }
-    }
-}
-
+        }}}
 /// The list of possible subcommands.
 #[derive(StructOpt, Debug)]
 pub enum Command {
@@ -102,8 +96,7 @@ pub enum Command {
     Trash {
         /// The instance id to put to the trash.
         instance_id: u32,
-    },
-}
+    },}
 
 #[derive(StructOpt, Debug)]
 pub struct CreateTypeCommand {
@@ -394,8 +387,7 @@ pub fn print_item_types(types: &Vec<&ItemType>, inventory: &Inventory, minimal: 
             ]);
         });
         table.printstd();
-    }
-}
+    }}
 
 pub fn print_item_instances(instances: &Vec<&ItemInstance>, inv: &Inventory, minimal: bool) {
     if minimal {
@@ -442,8 +434,7 @@ pub fn print_item_instances(instances: &Vec<&ItemInstance>, inv: &Inventory, min
             ]);
         });
         table.printstd();
-    }
-}
+    }}
 
 pub fn update_type<'a>(cmd: &UpdateTypeCommand, inventory: &mut Inventory) {
     if let Some(mut item_type) = inventory.item_types.iter_mut().find(|t| t.id == cmd.id) {
