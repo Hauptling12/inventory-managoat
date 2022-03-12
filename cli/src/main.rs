@@ -7,7 +7,7 @@ use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
 #[structopt(
-    name = "asset-mr",
+    name = "invin-mr",
 )]
 pub struct Manager {
     /// Uses the inventory with this name. The files will be loaded and saved using this prefix. Defaults to "inventory".
@@ -239,7 +239,7 @@ fn main() {
 pub fn default_workdir() -> PathBuf {
     let mut dir =
         dirs::data_local_dir().expect("Failed to locate suitable folder to store inventory data.");
-    dir.push("inventory_managoat");
+    dir.push("invin-mr");
     dir
 }
 
