@@ -5,7 +5,6 @@ authors = ["Hauptling12"]
 edition = "2018"
 description = """
 A Simple Command Line Inventory Manager.
-Prevent food waste and never lose track of your items!
 """
 keywords = ["inventory", "manager", "inv"]
 repository = "https://github.com/Hauptling12/invin-mr"
